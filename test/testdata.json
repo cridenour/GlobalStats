@@ -1,0 +1,74 @@
+{
+    "attackers": [
+        {
+            "id": 3492949,
+            "class": "Recon",
+            "level": 36,
+            "name": "juganout",
+            "kills": 18,
+            "deaths": 11,
+            "assists": 12,
+            "damage": 101153,
+            "botDamage": 35017,
+            "healing": 0,
+            "botKills": 14,
+            "objective": "55378.7",
+            "defense": 0,
+            "absorbed": 5134,
+            "minutes": 16
+        },
+        {
+            "id": 651684,
+            "class": "Medic",
+            "level": 36,
+            "name": "Friartruck",
+            "kills": 0,
+            "deaths": 14,
+            "assists": 33,
+            "damage": 22130,
+            "botDamage": 447,
+            "healing": 114141,
+            "botKills": 0,
+            "objective": "25243.4",
+            "defense": 0,
+            "absorbed": 5147,
+            "minutes": 16
+        }
+    ],
+    "defenders": [
+        {
+            "id": 2316516,
+            "class": "Assault",
+            "level": 47,
+            "name": "Odeng",
+            "kills": 22,
+            "deaths": 15,
+            "assists": 13,
+            "damage": 101488,
+            "botDamage": 13065,
+            "healing": 0,
+            "botKills": 3,
+            "objective": "74624.5",
+            "defense": 4045,
+            "absorbed": 8584,
+            "minutes": 16
+        },
+        {
+            "id": 165165,
+            "class": "Robotics",
+            "level": 37,
+            "name": "DarkAegisFury",
+            "kills": 10,
+            "deaths": 18,
+            "assists": 1,
+            "damage": 37677,
+            "botDamage": 881,
+            "healing": 8213,
+            "botKills": 1,
+            "objective": "27973",
+            "defense": 0,
+            "absorbed": 4155,
+            "minutes": 16
+        }
+    ]
+}
