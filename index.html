@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <title>GlobalStats</title>
+    <script src="static/js/lib/json.js"></script>
+    <script src="static/js/lib/jquery-1.6.2.min.js"></script>
+    <script src="static/js/lib/underscore-min.js"></script>
+    <script src="static/js/lib/backbone-min.js"></script>
+    <script src="static/js/mission.js"></script>
+</head>
+<body>
+
+<div id="mission-view">
+    Here are the stats for the mission.
+
+    <table id="player-stats">
+        <thead>
+        <tr>
+            <th>Basics</th>
+            <th>Kills</th>
+            <th>Deaths</th>
+            <th>Assists</th>
+            <th>Damage</th>
+            <th>Bot</th>
+            <th>Healing</th>
+            <th>Objective</th>
+            <th>Defense</th>
+            <th>Absorbed</th>
+            <th>Minutes</th>
+        </tr>
+        </thead>
+        <tbody id="player-rows">
+        
+        </tbody>
+    </table>
+</div>
+
+<script type="text/template" id="player-template">
+    <td class="player-basics">
+        <div class="player-class"></div>
+        <div class="player-level"></div>
+        <div class="player-name"></div>
+    </td>
+    <td class="player-kills"></td>
+    <td class="player-deaths"></td>
+    <td class="player-assists"></td>
+    <td class="player-damage"></td>
+    <td class="player-bot">
+        <div class="player-botKills"></div>
+        <div class="player-botDamage"></div>
+    </td>
+    <td class="player-healing"></td>
+    <td class="player-objective"></td>
+    <td class="player-defense"></td>
+    <td class="player-absorbed"></td>
+    <td class="player-minutes"></td>
+</script>
+
+</body>
+</html>
