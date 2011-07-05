@@ -2,7 +2,7 @@
     "attackers": [
         {
             "id": 3492949,
-            "class": "Recon",
+            "playerClass": "Recon",
             "level": 36,
             "name": "juganout",
             "kills": 18,
@@ -19,7 +19,7 @@
         },
         {
             "id": 651684,
-            "class": "Medic",
+            "playerClass": "Medic",
             "level": 36,
             "name": "Friartruck",
             "kills": 0,
@@ -38,7 +38,7 @@
     "defenders": [
         {
             "id": 2316516,
-            "class": "Assault",
+            "playerClass": "Assault",
             "level": 47,
             "name": "Odeng",
             "kills": 22,
@@ -55,7 +55,7 @@
         },
         {
             "id": 165165,
-            "class": "Robotics",
+            "playerClass": "Robotics",
             "level": 37,
             "name": "DarkAegisFury",
             "kills": 10,

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>GlobalStats</title>
+    <link rel="stylesheet" href="{{ static_url(css/style.css) }}"/>
+    <script type="text/javascript" src="{{ static_url(js/lib/json.js) }}"></script>
+    <script type="text/javascript" src="{{ static_url(js/lib/jquery-1.6.2.min.js) }}"></script>
+    <script type="text/javascript" src="{{ static_url(js/lib/underscore-min.js) }}"></script>
+    <script type="text/javascript" src="{{ static_url(js/lib/backbone-dev.js) }}"></script>
+    <script type="text/javascript" src="{{ static_url(js/mission.js) }}"></script>
+</head>
+<body>
+
+<div id="mission-view">
+    Here are the stats for the <a href="#mission/1">mission</a>.
+
+    <table id="player-stats">
+        <thead>
+        <tr>
+            <th>Basics</th>
+            <th>Kills</th>
+            <th>Deaths</th>
+            <th>Assists</th>
+            <th>Damage</th>
+            <th>Bot</th>
+            <th>Healing</th>
+            <th>Objective</th>
+            <th>Defense</th>
+            <th>Absorbed</th>
+            <th>Minutes</th>
+        </tr>
+        </thead>
+        <tbody id="attacker-rows" class="player-rows"></tbody>
+        <tbody id="attacker-totals" class="team-totals"></tbody>
+        <tbody id="defender-rows" class="player-rows"></tbody>
+        <tbody id="defender-totals" class="team-totals"></tbody>
+    </table>
+    <div id="player-details"></div>
+</div>
+
+<script type="text/template" id="player-template">
+    <td class="player-basics">
+        <div class="player-class"><%= playerClass %></div>
+        <div class="player-level"><%= level %></div>
+        <div class="player-name"><%= name %></div>
+    </td>
+    <td class="player-kills"><%= kills %></td>
+    <td class="player-deaths"><%= deaths %></td>
+    <td class="player-assists"><%= assists %></td>
+    <td class="player-damage"><%= damage %></td>
+    <td class="player-bot">
+        <div class="player-botKills"><%= botKills %></div>
+        <div class="player-botDamage"><%= botDamage %></div>
+    </td>
+    <td class="player-healing"><%= healing %></td>
+    <td class="player-objective"><%= objective %></td>
+    <td class="player-defense"><%= defense %></td>
+    <td class="player-absorbed"><%= absorbed %></td>
+    <td class="player-minutes"><%= minutes %></td>
+</script>
+
+<script type="text/template" id="player-details-template">
+    <strong>Name: </strong><span class="player-level-name"><%= name %></span>
+    <strong></strong>
+</script>
+
+</body>
+</html>
