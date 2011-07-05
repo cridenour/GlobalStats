@@ -8,7 +8,6 @@ class BaseHandler(tornado.web.RequestHandler):
         a = str.split(args, r"/")
         return a[pos]
 
-
 class PlayerHandler(BaseHandler):
     def get(self, pid):
         pass

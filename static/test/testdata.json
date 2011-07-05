@@ -70,5 +70,48 @@
             "absorbed": 4155,
             "minutes": 16
         }
-    ]
+    ],
+    "players": {
+        "3492949": {
+            
+        },
+        "651684": {
+
+        },
+        "2316516": {
+
+        },
+        "165165": {
+
+        }
+    },
+    "mission": {
+        "id": 11662387,
+        "map": "SeaSide",
+        "type": "Control",
+        "date": "2011-07-03 17:43:29",
+        "summary": {
+            "attackers": {
+                "win": true,
+                "kills": 50,
+                "deaths": 68,
+                "assists": 52,
+                "damage": 534319,
+                "healing": 150061
+            },
+            "defenders": {
+                "win": false,
+                "kills": 66,
+                "deaths": 52,
+                "assists": 81,
+                "damage": 526675,
+                "healing": 143616
+            }
+        },
+        "mvp" : {
+            "id": 651684,
+            "name": "Friartruck",
+            "why": ["healing","objective","assists"]
+        }
+    }
 }

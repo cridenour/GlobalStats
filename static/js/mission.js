@@ -50,15 +50,7 @@ $(function() {
     });
 
     var Team = Backbone.Collection.extend({
-        model: Player,
-
-        sum: function(stat) {
-            total = 0;
-            this.map(function(p) {
-                total = total + p.get(stat);
-            });
-            return total;
-        }
+        model: Player
     });
 
     var TeamTotals = Backbone.Model.extend({});
