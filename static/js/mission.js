@@ -12,10 +12,10 @@ $(function() {
             var m = new Mission({id: mid});
             var mView = new MissionView({model: m});
 
-            $.getJSON('test/testdata.json', function(data) {
-                m.attackers.reset(data.attackers);
-                m.defenders.reset(data.defenders);
-            });
+            //$.getJSON('test/testdata.json', function(data) {
+               // m.attackers.reset(data.attackers);
+                //m.defenders.reset(data.defenders);
+            //});
         }
 
     });
@@ -38,10 +38,12 @@ $(function() {
     var Mission = Backbone.Model.extend({
         initialize: function() {
             this.attackers = new Team;
-            //this.attackers.url = 'mission/' + this.id + '/attackers';
+            this.attackers.url = 'mission/' + this.id + '/attackers';
+            this.attackers.fetch();
 
             this.defenders = new Team;
-            //this.defenders.url = 'mission/' + this.id + '/defenders';
+            this.defenders.url = 'mission/' + this.id + '/defenders';
+            this.defenders.fetch();
         },
 
         urlRoot: 'mission'
