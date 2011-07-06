@@ -2,41 +2,69 @@
 <html>
 <head>
     <title>GlobalStats</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700&v2' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ static_url('css/style.css') }}"/>
+    <link rel="stylesheet" href="{{ static_url('css/notifications.css') }}" />
     <script type="text/javascript" src="{{ static_url('js/lib/json.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/lib/jquery-1.6.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/lib/underscore-min.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/lib/backbone-dev.js') }}"></script>
+    <script type="text/javascript" src="{{ static_url('js/notifications.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/mission.js') }}"></script>
 </head>
 <body>
-
-<div id="mission-view">
-    Here are the stats for the <a href="#mission/1">mission</a>.
-
-    <table id="player-stats">
-        <thead>
-        <tr>
-            <th>Basics</th>
-            <th>Kills</th>
-            <th>Deaths</th>
-            <th>Assists</th>
-            <th>Damage</th>
-            <th>Bot</th>
-            <th>Healing</th>
-            <th>Objective</th>
-            <th>Defense</th>
-            <th>Absorbed</th>
-            <th>Minutes</th>
-        </tr>
-        </thead>
-        <tbody id="attacker-rows" class="player-rows"></tbody>
-        <tbody id="attacker-totals" class="team-totals"></tbody>
-        <tbody id="defender-rows" class="player-rows"></tbody>
-        <tbody id="defender-totals" class="team-totals"></tbody>
-    </table>
-    <div id="player-details"></div>
+<div id="notifications">
+    <div class="pane">
+        <div class="messages">
+            <a class="prev btn" title="Previous"></a>
+            <div class="message">
+                <div class="title">
+                    <ul>
+                        <li class="label">Message</li>
+                        <li class="current">1</li>
+                        <li class="of">of</li>
+                        <li class="total">3</li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div>Vivamus adipiscing felis ac metus ornare tincidunt.</div>
+                    <div>Fusce tincidunt placerat diam id feugiat. </div>
+                </div>
+            </div>
+            <a class="next btn" title="Next"></a>
+        </div>
+    </div>
+    <div class="handle">Notifications (<span class="count">3</span>)<span class="arrow"></span></div>
 </div>
+<div id="content">
+
+    <div id="mission-view">
+        <table id="player-stats">
+            <thead>
+            <tr>
+                <th>Basics</th>
+                <th>Kills</th>
+                <th>Deaths</th>
+                <th>Assists</th>
+                <th>Damage</th>
+                <th>Bot</th>
+                <th>Healing</th>
+                <th>Objective</th>
+                <th>Defense</th>
+                <th>Absorbed</th>
+                <th>Minutes</th>
+            </tr>
+            </thead>
+            <tbody id="attacker-rows" class="player-rows"></tbody>
+            <tbody id="attacker-totals" class="team-totals"></tbody>
+            <tbody id="defender-rows" class="player-rows"></tbody>
+            <tbody id="defender-totals" class="team-totals"></tbody>
+        </table>
+        <div id="player-details"></div>
+    </div>
+</div>
+
 
 <script type="text/template" id="player-template">
     <td class="player-basics">

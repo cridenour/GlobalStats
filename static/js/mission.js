@@ -3,6 +3,7 @@ $(function() {
     var App = Backbone.Router.extend({
 
         routes: {
+            "": "home",
             "mission/:mid": "mission"
         },
 
@@ -16,6 +17,10 @@ $(function() {
                // m.attackers.reset(data.attackers);
                 //m.defenders.reset(data.defenders);
             //});
+        },
+
+        home: function() {
+            $("#content");
         }
 
     });
