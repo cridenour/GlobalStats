@@ -36,7 +36,7 @@
 
 #notifications #handle span.count {
     font-weight: bold;
-    padding-left: 2px;
+    padding-right: 1px;
 }
 
 #notifications #handle span.arrow {
@@ -113,9 +113,10 @@
     right: 10px;
 }
 
-#notifications #messages div.items {
+#notifications #messages #items {
     overflow: hidden;
     position: relative;
+    height: 1.2em;
 }
 
 #notifications #messages #items > div {

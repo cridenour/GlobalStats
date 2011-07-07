@@ -31,13 +31,20 @@ $(function () {
             this.$("#items > div").eq(this.current - 1).remove();
             var m = Notifications.at(this.current - 1);
             Notifications.remove(m);
-            if(Notifications.length == 0)
+            if(Notifications.length == 0) {
+                this.current = 0;
+                this.render();
                 this.toggle();
-            else
-                this.$("#items > div").eq(this.current).fadeIn();
+            } else {
+                if(this.current > Notifications.length)
+                    this.current = Notifications.length;
+                this.$("#items > div").eq(this.current - 1).fadeIn();
+                this.render();
+            }
         },
 
         next: function() {
+            if(Notifications.length == 0) { this.toggle(); return; }
             var c = this.$("#items > div").eq(this.current - 1);
             var n = this.$("#items > div").eq(this.current);
             if(n.length == 0) { n = $("#items > div:first"); }
@@ -50,6 +57,7 @@ $(function () {
         },
 
         prev: function() {
+            if(Notifications.length == 0) { this.toggle(); return; }
             var c = this.$("#items > div").eq(this.current - 1);
             var n = this.$("#items > div").eq(this.current - 2);
             if(n.length == 0) { n = $("#items > div:last"); }
@@ -77,7 +85,7 @@ $(function () {
         },
 
         initialize: function() {
-            _.bindAll(this, 'addMessage', 'addAll', 'render', 'toggle', 'showHandle', 'next', 'prev');
+            _.bindAll(this, 'addMessage', 'addAll', 'render', 'toggle', 'showHandle', 'next', 'prev', 'delete');
 
             Notifications.bind('add', this.addMessage);
             Notifications.bind('reset', this.addAll);
