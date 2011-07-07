@@ -26,6 +26,10 @@ class MainHandler(BaseHandler):
     def get(self):
         self.render("templates/index.html")
 
+class NotificationHandler(BaseHandler):
+    def get(self):
+        self.write(json.dumps(''))
+
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "static"),
     "debug": True,
@@ -34,7 +38,8 @@ settings = {
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/mission/(.*)/(.*)", MissionHandler),
-    (r"/player/(.*)", PlayerHandler)
+    (r"/player/(.*)", PlayerHandler),
+    (r"/notifications", NotificationHandler)
 ], **settings)
 
 if __name__ == "__main__":

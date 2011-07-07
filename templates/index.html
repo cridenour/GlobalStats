@@ -14,31 +14,29 @@
 </head>
 <body>
 <div id="notifications">
-    <div class="pane">
-        <div class="messages">
+    <div id="pane">
+        <div id="messages">
             <a class="prev btn" title="Previous"></a>
-            <div class="message">
-                <div class="title">
+            <div id="message">
+                <div id="title">
                     <ul>
-                        <li class="label">Message</li>
-                        <li class="current">1</li>
-                        <li class="of">of</li>
-                        <li class="total">3</li>
+                        <li id="label">Notification</li>
+                        <li id="current"></li>
+                        <li>of</li>
+                        <li class="count"></li>
                     </ul>
                 </div>
-                <div class="items">
-                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    <div>Vivamus adipiscing felis ac metus ornare tincidunt.</div>
-                    <div>Fusce tincidunt placerat diam id feugiat. </div>
-                </div>
+                <div id="items"></div>
             </div>
+            <a class="delete" title="Dismiss"></a>
             <a class="next btn" title="Next"></a>
         </div>
     </div>
-    <div class="handle">Notifications (<span class="count">3</span>)<span class="arrow"></span></div>
+    <div id="handle">Notifications (<span class="count"></span>)<span class="arrow"></span></div>
 </div>
 <div id="content">
-
+    <a href="#" onclick="Notifications.add({message: 'Testing the notifications.'})">Click me</a>
+    <a href="#" onclick="Notifications.add({message: 'Baby.'})">Click me</a>
     <div id="mission-view">
         <table id="player-stats">
             <thead>

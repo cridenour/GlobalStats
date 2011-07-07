@@ -3,7 +3,7 @@
     position: relative;
 }
 
-#notifications div.pane {
+#notifications #pane {
     border-bottom: 1px solid #666;
     border-top: 1px solid #666;
     display: none;
@@ -19,7 +19,7 @@
     background: linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
 }
 
-#notifications div.handle {
+#notifications #handle {
     -moz-border-radius: 0 0 0 5px;
     -webkit-border-radius: 0 0 0 5px;
     border-radius: 0 0 0 5px;
@@ -31,14 +31,15 @@
     padding: 5px 25px 5px 10px;
     position: absolute;
     right: 0px;
+    display: none;
 }
 
-#notifications div.handle span.count {
+#notifications #handle span.count {
     font-weight: bold;
     padding-left: 2px;
 }
 
-#notifications div.handle span.arrow {
+#notifications #handle span.arrow {
     background: transparent url("../images/notifications-arrows.png") no-repeat 0 -10px scroll;
     height: 10px;
     position: absolute;
@@ -47,71 +48,87 @@
     width: 10px;
 }
 
-#notifications.open div.handle span.arrow {
+#notifications.open #handle span.arrow {
     background-position: -10px -10px;
 }
 
-#notifications div.messages {
-    background: url("../images/notifications-bg.png") no-repeat 12px 15px scroll;
+#notifications #messages {
+    background: url("../images/notifications-bg.png") no-repeat 32px 15px scroll;
     font-size: 15px;
     overflow: hidden;
     padding: 10px 15px;
     margin: 0 auto;
     position: relative;
-    width: 700px;
+    width: 740px;
 }
 
-#notifications div.messages div.title {
+#notifications #messages #title {
     font-size: 16px;
 }
 
-#notifications div.messages div.title ul {
+#notifications #messages #title ul {
     overflow: hidden;
 }
 
-#notifications div.messages div.title li {
+#notifications #messages #title li {
     float: left;
     margin-right: 4px;
     padding-top: 2px;
 }
 
-#notifications div.messages div.title li.label {
+#notifications #messages #title #label {
     font-weight: bold;
     padding: 0;
     font-size: 18px;
 }
 
-#notifications div.messages a.btn {
+#notifications #messages a.btn {
     background: transparent url("../images/notifications-arrows.png") no-repeat scroll;
     cursor: pointer;
     height: 10px;
     width: 10px;
     display: block;
     position: absolute;
-    top: 40px;
+    top: 70px;
 }
 
-#notifications div.messages a.prev {
+#notifications #messages a.delete {
+    background: transparent url("../images/notifications-delete.png") no-repeat scroll;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+}
+
+#notifications #messages a.prev {
     background-position: 0 0;
     left: 0px;
 }
 
-#notifications div.messages a.next {
+#notifications #messages a.next {
     background-position: -10px 0;
     right: 10px;
 }
 
-#notifications div.messages div.items {
+#notifications #messages div.items {
     overflow: hidden;
     position: relative;
-    width: 20000px;
 }
 
-#notifications div.messages div.items > div {
+#notifications #messages #items > div {
     float: left;
     width: 760px;
+}
+
+#notifications #message {
+    width: 700px;
+    margin: 0 auto;
 }
 
 #notifications ul {
     list-style: none;
 }
+

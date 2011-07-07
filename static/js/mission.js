@@ -3,8 +3,8 @@ $(function() {
     var App = Backbone.Router.extend({
 
         routes: {
-            "": "home",
-            "mission/:mid": "mission"
+            "mission/:mid": "mission",
+            "/": "home"
         },
 
         mission: function(mid) {
@@ -13,14 +13,10 @@ $(function() {
             var m = new Mission({id: mid});
             var mView = new MissionView({model: m});
 
-            //$.getJSON('test/testdata.json', function(data) {
-               // m.attackers.reset(data.attackers);
-                //m.defenders.reset(data.defenders);
-            //});
         },
 
         home: function() {
-            $("#content");
+            
         }
 
     });
