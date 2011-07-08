@@ -2,6 +2,7 @@ import tornado.ioloop
 import tornado.web
 import os.path
 import json
+from gapython.api import API
 
 class BaseHandler(tornado.web.RequestHandler):
     def arg(self, args, pos):
@@ -30,6 +31,11 @@ class NotificationHandler(BaseHandler):
     def get(self):
         self.write(json.dumps(''))
 
+class UtilsHandler(BaseHandler):
+    def get(self):
+        api = API()
+        self.write(api.getTimestamp())
+
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "static"),
     "debug": True,
@@ -39,7 +45,8 @@ application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/mission/(.*)/(.*)", MissionHandler),
     (r"/player/(.*)", PlayerHandler),
-    (r"/notifications", NotificationHandler)
+    (r"/notifications", NotificationHandler),
+    (r"/utils", UtilsHandler)
 ], **settings)
 
 if __name__ == "__main__":
