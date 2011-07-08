@@ -4,7 +4,7 @@ $(function() {
 
         routes: {
             "mission/:mid": "mission",
-            "/": "home"
+            "": "home"
         },
 
         mission: function(mid) {
@@ -13,10 +13,12 @@ $(function() {
             var m = new Mission({id: mid});
             var mView = new MissionView({model: m});
 
+            $(".page-view:visible").hide("slide", { direction: "left" });
+            $("#mission-view").show();
         },
 
         home: function() {
-            
+            $("#home").show();
         }
 
     });
