@@ -11,10 +11,7 @@ $(function() {
             console.debug('Loading mission ' + mid);
 
             var m = new Mission({id: mid});
-            var mView = new MissionView({model: m});
-
-            $(".page-view:visible").hide("slide", { direction: "left" });
-            $("#mission-view").show();
+            return mView = new MissionView({model: m});
         },
 
         home: function() {

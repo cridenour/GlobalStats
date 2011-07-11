@@ -9,6 +9,7 @@
     <script type="text/javascript" src="{{ static_url('js/lib/jquery-1.6.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/lib/underscore-min.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/lib/backbone-dev.js') }}"></script>
+    <script type="text/javascript" src="{{ static_url('js/lib/jquery.pageslide.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/notifications.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/mission.js') }}"></script>
 </head>
@@ -39,6 +40,7 @@
     <div class="page-view" id="home">
         <h1>Welcome to Global Stats</h1>
         <p id="site-description">Global Stats will help you track your PvP record in the Sci-Fi shooter Global Agenda.  Register to receive notifications or begin browsing recent missions.</p>
+        <a href="#mission/1" id="testslide">Test slide</a>
     </div>
     
     <div class="page-view" id="mission-view">
@@ -92,6 +94,12 @@
 <script type="text/template" id="player-details-template">
     <strong>Name: </strong><span class="player-level-name"><%= name %></span>
     <strong></strong>
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        $("#testslide").pageSlide({width: '100%'});
+    });
 </script>
 
 </body>
