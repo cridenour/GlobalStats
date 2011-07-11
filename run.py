@@ -34,7 +34,7 @@ class NotificationHandler(BaseHandler):
 class UtilsHandler(BaseHandler):
     def get(self):
         api = API()
-        self.write(api.getTimestamp())
+        api.getSession()
 
 settings = {
     "static_path": os.path.join(os.path.dirname(__file__), "static"),
